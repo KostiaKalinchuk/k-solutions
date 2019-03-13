@@ -406,31 +406,6 @@ template {
 [hidden] {
   display: none; }
 
-@font-face {
-  font-family: Museo100;
-  src: url(../fonts/MuseoSansCyrl-100.woff2) format("woff2"), url(../fonts/MuseoSansCyrl-100.woff) format("woff"), url(../fonts/MuseoSansCyrl-100.ttf) format("truetype");
-  font-style: normal; }
-
-@font-face {
-  font-family: Museo300;
-  src: url(../fonts/MuseoSansCyrl-300.woff2) format("woff2"), url("../fonts/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl-300.ttf") format("truetype");
-  font-style: normal; }
-
-@font-face {
-  font-family: Museo500;
-  src: url(../fonts/MuseoSansCyrl-500.woff2) format("woff2"), url("../fonts/MuseoSansCyrl-500.woff") format("woff"), url("../fonts/MuseoSansCyrl-500.ttf") format("truetype");
-  font-style: normal; }
-
-@font-face {
-  font-family: Museo700;
-  src: url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
-  font-style: normal; }
-
-@font-face {
-  font-family: Museo900;
-  src: url("../fonts/MuseoSansCyrl-900.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-900.woff") format("woff"), url("../fonts/MuseoSansCyrl-900.ttf") format("truetype");
-  font-style: normal; }
-
 body {
   background: #ffffff;
   color: #1F1F1F;
@@ -442,6 +417,8 @@ body {
   margin: 0 auto; }
 
 header {
+  left: 0;
+  top: 0;
   z-index: 99;
   height: 90px;
   width: 100%;
@@ -486,99 +463,129 @@ header {
         padding-right: 20px; }
 
 .wrapper {
-  position: absolute;
   z-index: 1;
   margin-top: 120px; }
-
-.invoice {
-  height: 268px;
-  width: 948px;
-  border: 1px solid rgba(76, 116, 165, 0.33);
-  -webkit-box-shadow: 0 2px 4px rgba(76, 116, 165, 0.5);
-          box-shadow: 0 2px 4px rgba(76, 116, 165, 0.5); }
-  .invoice .wrap {
-    margin: 20px; }
-    .invoice .wrap hr {
-      border: 1px solid #e6e8eb;
-      opacity: .7; }
-    .invoice .wrap h1 {
-      color: #158acf;
-      font-size: 26px; }
-    .invoice .wrap .recipient {
+  .wrapper .invoice {
+    height: 268px;
+    width: 948px;
+    border: 1px solid rgba(76, 116, 165, 0.33);
+    -webkit-box-shadow: 0 2px 4px rgba(76, 116, 165, 0.5);
+            box-shadow: 0 2px 4px rgba(76, 116, 165, 0.5); }
+    .wrapper .invoice .wrap {
+      margin: 20px; }
+      .wrapper .invoice .wrap hr {
+        border: 1px solid #e6e8eb;
+        opacity: .7; }
+      .wrapper .invoice .wrap h1 {
+        color: #158acf;
+        font-size: 26px; }
+      .wrapper .invoice .wrap .recipient {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 15px 0 15px 0;
+        font-size: 14px; }
+        .wrapper .invoice .wrap .recipient .name {
+          opacity: 0.7; }
+      .wrapper .invoice .wrap .description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 15px 0 30px 0;
+        font-size: 14px; }
+        .wrapper .invoice .wrap .description .name {
+          opacity: 0.7; }
+      .wrapper .invoice .wrap .sum {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        color: #158acf;
+        font-size: 26px;
+        margin-top: 15px;
+        font-weight: 800; }
+  .wrapper .payment h2 {
+    color: #158acf;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 25px 0 25px 0; }
+  .wrapper .payment .payment-methods {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .wrapper .payment .payment-methods .method-tag {
+      background-color: #f9fafc;
+      padding: 15px 30px 15px 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      text-align: center;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      margin: 4px;
+      text-decoration: none;
+      border: 1px solid rgba(76, 116, 165, 0.33);
+      -webkit-box-shadow: 0 2px 2px rgba(76, 116, 165, 0.5);
+              box-shadow: 0 2px 2px rgba(76, 116, 165, 0.5); }
+      .wrapper .payment .payment-methods .method-tag:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0 4px 10px 4px rgba(204, 204, 223, 0.71);
+                box-shadow: 0 4px 10px 4px rgba(204, 204, 223, 0.71); }
+      .wrapper .payment .payment-methods .method-tag span {
+        color: #158acf; }
+  .wrapper footer {
+    border: 2px solid rgba(76, 116, 165, 0.33);
+    -webkit-box-shadow: 4px 0 0 0 rgba(76, 116, 165, 0.5);
+            box-shadow: 4px 0 0 0 rgba(76, 116, 165, 0.5);
+    background: #f9fafc;
+    margin-top: 150px; }
+    .wrapper footer .footer-wrap {
+      height: 77px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 15px 0 15px 0;
-      font-size: 14px; }
-      .invoice .wrap .recipient .name {
-        opacity: 0.7; }
-    .invoice .wrap .description {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      padding: 15px 0 30px 0;
-      font-size: 14px; }
-      .invoice .wrap .description .name {
-        opacity: 0.7; }
-    .invoice .wrap .sum {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      color: #158acf;
-      font-size: 26px;
-      margin-top: 15px;
-      font-weight: 800; }
-
-.payment h2 {
-  color: #158acf;
-  font-size: 26px;
-  font-weight: 800;
-  padding: 25px 0 25px 0; }
-
-.payment-methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-
-.method-tag {
-  background-color: #f9fafc;
-  padding: 1rem 2rem 1rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  margin: 4px;
-  text-decoration: none; }
-
-.method-tag:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 60px 10px rgba(204, 204, 223, 0.71);
-          box-shadow: 0 0 60px 10px rgba(204, 204, 223, 0.71); }
-
-.method-tag span {
-  color: #158acf; }
+      -ms-flex-line-pack: center;
+          align-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .wrapper footer .footer-wrap .cards img {
+        margin-right: 20px;
+        opacity: 0.5; }
+      .wrapper footer .footer-wrap a {
+        opacity: 0.5;
+        text-decoration: none;
+        color: black; }
+      .wrapper footer .footer-wrap .lang .eng {
+        border-right: 1px solid darkgrey;
+        line-height: 45px;
+        padding-right: 20px; }
+      .wrapper footer .footer-wrap .lang a {
+        margin-left: 20px; }
+      .wrapper footer .footer-wrap .lang span {
+        font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */
