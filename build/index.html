@@ -61,32 +61,56 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="payment">
                 <h2>Метод оплаты</h2>
                 <div class="payment-methods">
-                    <a href="#" class="method-tag">
+
+                    <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/bitcoin.png" alt="">
                     <span>Bitcoin</span>
                 </a>
-                    <a href="#" class="method-tag">
+
+                    <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/visa_mc.png" alt="">
                     <span>Visa/Mastercard</span>
                 </a>
-                    <a href="#" class="method-tag">
+
+                    <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/mts.png" alt="">
                     <span>MTS</span>
                 </a>
-                    <a href="#" class="method-tag">
+
+                    <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/webmoney.png" alt="">
                     <span>Webmoney</span>
                 </a>
-                    <a href="#" class="method-tag">
+
+                    <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/payeer.png" alt="">
                     <span>Payeer</span>
                 </a>
                 </div>
-
             </div>
+
+
+            <div class="payment-method" id="sample-2" style='display:none;'>
+
+                <form method="POST" id="ajax_form" action="" accept-charset="UTF-8">
+                    <input type="email" name="email" value="9leon1@gmail.com" />
+                    <input type="submit" id="btn" />
+                </form>
+
+                <br>
+
+                <div id="result_form"></div>
+            </div>
+
+
+
+
 
 
         </div>
@@ -117,7 +141,7 @@
                 </div>
         </footer>
     </div>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="js/script-min.js"></script>
 </body>
 
