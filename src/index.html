@@ -1,5 +1,4 @@
 @@include('templates/header.html')
-
 <header>
     <div class="container">
         <div class="header">
@@ -19,11 +18,8 @@
         </div>
     </div>
 </header>
-<div id="bg_layer"></div>
 <div class="wrapper">
     <div class="container">
-
-
         <div class="modal">
             <div class="modal-content">
                 <h5>Отправить форму</h5>
@@ -35,9 +31,6 @@
                 <button type="button" class="close">Закрыть</button>
             </div>
         </div>
-
-
-
         <div class="invoice">
             <div class="wrap">
                 <h1>Номер инвойса 101</h1>
@@ -53,78 +46,51 @@
                 </div>
             </div>
         </div>
-
-
-
         <div class="payment">
             <h2>Метод оплаты</h2>
             <div class="payment-methods">
-
                 <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/bitcoin.png" alt="">
                     <span>Bitcoin</span>
                 </a>
-
                 <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/visa_mc.png" alt="">
                     <span>Visa/Mastercard</span>
                 </a>
-
                 <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/mts.png" alt="">
                     <span>MTS</span>
                 </a>
-
                 <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/webmoney.png" alt="">
                     <span>Webmoney</span>
                 </a>
-
                 <a onclick="view('sample-2')" href="#" class="method-tag">
                     <img src="img/payeer.png" alt="">
                     <span>Payeer</span>
                 </a>
             </div>
         </div>
-
-
         <div class="payment-method" id="sample-2" style='display:none;'>
-
             <div class="method-tag">
                 <img src="img/payeer.png" alt="">
             </div>
-
             <form method="POST" id="ajax_form" action="" accept-charset="UTF-8">
                 <input type="email" name="email" value="9leon1@gmail.com"/>
                 <input type="submit" id="btn" class="demonstration" value="Оплатить"/>
             </form>
-
             <br>
-
-
-
-
-
-
         </div>
-
-
-
-
     </div>
     <footer>
         <div class="container">
-
             <div class="footer-wrap">
-
                 <a href="https://en.wikipedia.org/wiki/Hyperlink" class="contacts">КОНТАКТЫ</a>
-
                 <div class="cards">
                     <img src="img/visa.png">
                     <img src="img/masterCard.png">
                     <img src="img/pciDss.png">
                 </div>
-
                 <div class="lang">
                     <a href="#" class="eng">
                         English
@@ -133,11 +99,8 @@
                         <span>Русский</span>
                     </a>
                 </div>
-
             </div>
-
         </div>
     </footer>
 </div>
-
 @@include('templates/footer.html')

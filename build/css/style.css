@@ -598,7 +598,7 @@ header {
       text-align: center;
       -webkit-transition: 0.5s;
       transition: 0.5s;
-      margin: 4px;
+      margin: 4px 4px 20px 4px;
       text-decoration: none;
       -webkit-box-shadow: 0 2px 2px 0 rgba(76, 116, 165, 0.5);
               box-shadow: 0 2px 2px 0 rgba(76, 116, 165, 0.5); }
@@ -608,6 +608,51 @@ header {
                 box-shadow: 0 12px 5px -3px rgba(204, 204, 223, 0.71); }
       .wrapper .payment .payment-methods .method-tag span {
         color: #158acf; }
+  .wrapper .payment-method {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 40px; }
+    .wrapper .payment-method .method-tag {
+      background-color: #f9fafc;
+      padding: 25px 40px 25px 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      text-align: center;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      margin: 4px;
+      text-decoration: none;
+      -webkit-box-shadow: 2px 2px 2px 2px rgba(76, 116, 165, 0.5);
+              box-shadow: 2px 2px 2px 2px rgba(76, 116, 165, 0.5); }
+    .wrapper .payment-method form {
+      margin: 5px 0 0 20px; }
+      .wrapper .payment-method form input[type="submit"] {
+        background-color: #158acf;
+        color: #ffffff;
+        border-radius: 4px;
+        border: none;
+        height: 40px;
+        width: 96%;
+        text-transform: uppercase; }
+      .wrapper .payment-method form input[type="email"] {
+        width: 90%;
+        margin-bottom: 15px;
+        height: 20px;
+        font-size: 25px;
+        opacity: 0.7;
+        padding: 10px; }
   .wrapper footer {
     border: 2px solid rgba(76, 116, 165, 0.33);
     -webkit-box-shadow: 4px 0 0 0 rgba(76, 116, 165, 0.5);
@@ -629,6 +674,10 @@ header {
               align-items: center; }
       .wrapper footer .footer-wrap .cards img {
         margin-right: 20px;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+        -webkit-filter: gray;
+                filter: gray;
         opacity: 0.5; }
         .wrapper footer .footer-wrap .cards img:hover {
           -webkit-filter: none;
@@ -651,70 +700,82 @@ header {
       .wrapper footer .footer-wrap .lang span {
         font-weight: 700; }
 
-.payment-method {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: 40px; }
-  .payment-method .method-tag {
-    background-color: #f9fafc;
-    padding: 25px 40px 25px 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    text-align: center;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    margin: 4px;
-    text-decoration: none;
-    -webkit-box-shadow: 2px 2px 2px 2px rgba(76, 116, 165, 0.5);
-            box-shadow: 2px 2px 2px 2px rgba(76, 116, 165, 0.5); }
-  .payment-method form {
-    margin: 5px 0 0 20px; }
-    .payment-method form input[type="submit"] {
-      background-color: #158acf;
-      color: #ffffff;
-      border-radius: 4px;
-      border: none;
-      height: 40px;
-      width: 96%;
-      text-transform: uppercase; }
-    .payment-method form input[type="email"] {
-      width: 90%;
-      margin-bottom: 15px;
-      height: 20px;
-      font-size: 25px;
-      opacity: 0.7;
-      padding: 10px; }
-
-#bg_layer {
-  position: absolute;
-  z-index: 80;
-  width: 100%;
-  height: 140%;
-  background: #000;
-  opacity: 0.5;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  bottom: 0;
-  background-size: cover;
-  visibility: hidden; }
-
 input[type="submit"]:hover {
   cursor: pointer; }
 
 input[type="button"]:hover {
   cursor: pointer; }
+
+@media (min-width: 480px) and (max-width: 639px) {
+  .container {
+    width: 450px; }
+  .wrapper .invoice {
+    width: 450px; }
+  .wrapper .payment .payment-methods {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .wrapper .modal {
+    margin-left: 25px; }
+  .wrapper footer .footer-wrap .cards img {
+    margin: 0; }
+  header .header .logo {
+    padding-top: 20px; }
+  header .header .logo img {
+    height: 50px; }
+  header .header .info {
+    font-size: 12px; }
+  .cards {
+    display: none; }
+  .wrapper footer .footer-wrap {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  header .header .info a {
+    margin-right: 10px; }
+  header .header .info .eng {
+    line-height: 15px;
+    padding-right: 10px; }
+  header .header .info {
+    padding-top: 20px; }
+  .wrapper .payment-method form input[type="email"] {
+    width: 85%;
+    font-size: 20px; } }
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .container {
+    width: 600px; }
+  .wrapper .invoice {
+    width: 600px; }
+  .wrapper .payment .payment-methods {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .wrapper .modal {
+    margin-left: 100px; }
+  .wrapper footer .footer-wrap .cards img {
+    margin: 0; }
+  header .header .logo {
+    padding-top: 10px; }
+  header .header .info {
+    padding-top: 10px; }
+  header .header .logo img {
+    height: 60px; }
+  header .header .info {
+    font-size: 14px; } }
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .container {
+    width: 700px; }
+  .wrapper .invoice {
+    width: 700px; }
+  .wrapper .payment .payment-methods {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .wrapper .modal {
+    margin-left: 150px; } }
 
 /*# sourceMappingURL=style.css.map */
