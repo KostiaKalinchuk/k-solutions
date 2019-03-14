@@ -15,7 +15,7 @@ function view(idDiv){
     var div = document.getElementsByClassName('payment-method');
     for(var i = 0; i < div.length; i++){
         if(div[i].id == idDiv){
-            div[i].style.display = 'block';
+            div[i].style.display = 'flex';
             continue;
         }
         div[i].style.display = 'none';
@@ -57,7 +57,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
             form.append('<input type="text" name="payway" value="'+result.payway+'">');
             form.append('<input type="text" name="shop_order_id" value="'+result.shop_order_id+'">');
             form.append('<input type="text" name="description" value="'+result.description+'">');
-            form.append("<input type='submit'/>");
+            form.append('<input type="submit" value="Отправить запрос"/>');
 
 
         },
@@ -66,3 +66,31 @@ function sendAjaxForm(result_form, ajax_form, url) {
         }
     });
 }
+
+
+var demo = document.getElementsByClassName('demonstration')[0];
+demo.onclick = function () {
+    var a = document.getElementsByClassName('modal')[0];
+    a.setAttribute("style", "visibility:visible");
+
+    var b = document.getElementById('bg_layer');
+    b.setAttribute("style", "visibility:visible");
+};
+
+var close = document.getElementsByClassName('close')[0];
+close.onclick = function () {
+    var a = document.getElementsByClassName('modal')[0];
+    a.setAttribute("style", "visibility:hidden");
+
+    var b = document.getElementById('bg_layer');
+    b.setAttribute("style", "visibility:hidden");
+};
+
+
+// $('#bg_layer').hide();
+// $('#btn').click(function(){
+//     $('#bg_layer').show();
+// });
+// $('.close').click(function(){
+//     $('#bg_layer').hide();
+// });
